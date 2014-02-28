@@ -21,7 +21,7 @@ $restore_to    = required_param('restore_to', PARAM_INT);
 
 require_login();
 
-$blockname = get_string('blockname', 'block_grade_restore');
+$blockname = get_string('pluginname', 'block_grade_restore');
 $navigation = array(
             array('name' => 'Backups', 'link' => "{$CFG->wwwroot}/blocks/grade_restore/list.php?restore_to=$restore_to", 'type'=>'title'),
             array('name' => $blockname, 'link' => '', 'type'=> 'title'),

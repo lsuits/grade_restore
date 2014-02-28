@@ -2,7 +2,7 @@
 
 //Block Strings
 $string['restore_course'] = 'Restore a Course with Grades';
-$string['blockname'] = 'Grades Restore';
+$string['pluginname'] = 'Grades Restore';
 $string['grade_restore:canrestore'] = 'Allows users to restore courses via Grade Restore';
 $string['grade_restore:cansearch'] = 'Allows users to filter the restore list';
 $string['err_permission'] = 'You do not have the correct permissions to perform this action.';

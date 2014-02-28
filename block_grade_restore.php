@@ -9,8 +9,7 @@
 class block_grade_restore extends block_list {
  
     function init() {
-        $this->title = get_string('blockname', 'block_grade_restore');
-        $this->version = 2010021200;
+        $this->title = get_string('pluginname', 'block_grade_restore');
     }
 
     /**

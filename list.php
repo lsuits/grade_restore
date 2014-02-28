@@ -35,7 +35,7 @@ if (has_capability("block/grade_restore:cansearch", $context)) {
 require_js(array('yui_dom-event', 'yui_animation',
         $CFG->wwwroot . '/blocks/grade_restore/lib/selection.js'));
 
-$blockname = get_string('blockname', 'block_grade_restore');
+$blockname = get_string('pluginname', 'block_grade_restore');
 $navigation = array (
             array('name' => $blockname, 'link' => '', 'type'=>'title'),
             );

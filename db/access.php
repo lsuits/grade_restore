@@ -8,24 +8,35 @@
 */
 
 
-$block_grade_restore_capabilities = array (
-                'block/grade_restore:canrestore' => array(
-                    'captype'=>'write',
-                    'contextlevel' => CONTEXT_BLOCK,
-                    'legacy'=> array (
-                        'admin' => CAP_ALLOW,
-                        'editingteacher' => CAP_ALLOW
-                    )
-                 ),      
+$capabilities = array (
+    'block/grade_restore:canrestore' => array(
+        'captype'=>'write',
+        'contextlevel' => CONTEXT_BLOCK,
+        'legacy'=> array (
+            'manager' => CAP_ALLOW,
+            'editingteacher' => CAP_ALLOW
+        )
+     ),      
 
-                'block/grade_restore:cansearch' => array(
-                    'captype' => 'read',
-                    'contextlevel' => CONTEXT_BLOCK,
-                    'legacy' => array(
-                        'admin' => CAP_ALLOW,
-                        'coursecreator' => CAP_ALLOW
-                    )
-                )
-    );
+    'block/grade_restore:cansearch' => array(
+        'captype' => 'read',
+        'contextlevel' => CONTEXT_BLOCK,
+        'legacy' => array(
+            'manager' => CAP_ALLOW,
+            'coursecreator' => CAP_ALLOW
+        )
+    ),
+    
+    'block/grade_restore:addinstance' => array(
+        'captype' => 'write',
+        'contextlevel' => CONTEXT_BLOCK,
+        'archetypes' => array(
+            'editingteacher' => CAP_ALLOW,
+            'student' => CAP_PROHIBIT,
+        ),
+
+        'clonepermissionsfrom' => 'moodle/site:manageblocks'
+    )
+);
 
 ?>
