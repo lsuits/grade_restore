@@ -36,7 +36,18 @@ $capabilities = array (
         ),
 
         'clonepermissionsfrom' => 'moodle/site:manageblocks'
-    )
+    ),
+    
+    'block/grade_restore:myaddinstance' => array(
+        'captype' => 'write',
+        'contextlevel' => CONTEXT_SYSTEM,
+        'archetypes' => array(
+            'editingteacher' => CAP_ALLOW,
+            'student' => CAP_PROHIBIT,
+        ),
+
+        'clonepermissionsfrom' => 'moodle/my:manageblocks'
+    ),
 );
 
 ?>
